@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../python_intermediate/.idea/python_intermediate.iml" filepath="$PROJECT_DIR$/../python_intermediate/.idea/python_intermediate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/readvoria.iml" filepath="$PROJECT_DIR$/.idea/readvoria.iml" />
+    </modules>
+  </component>
+</project>
