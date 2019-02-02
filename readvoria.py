@@ -1,5 +1,6 @@
 """readvoria - reads news from voria.gr"""
 
+import configparser
 import feedparser
 import pprint
 import os
@@ -37,7 +38,10 @@ def create_database(*, force=True):
         except OSError:
             pass
     with closing(sqlite3.connect(database_file)) as conn:
-        conn.executescript(schema_sql)
+        cfp = configparser.ConfigParser()
+        cfp.read('readvoria.ini')
+        create_sql = cfp.get('sql', 'select', raw=True)
+        conn.executescript(create_sql)
         conn.commit()
 
 
