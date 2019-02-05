@@ -40,7 +40,7 @@ def create_database(*, force=True):
     with closing(sqlite3.connect(database_file)) as conn:
         cfp = configparser.ConfigParser()
         cfp.read('readvoria.ini')
-        create_sql = cfp.get('sql', 'select', raw=True)
+        create_sql = cfp.get('sql', 'create', raw=True)
         conn.executescript(create_sql)
         conn.commit()
 
